@@ -9,6 +9,15 @@ var translator = function(string){
   } else if (string.substr(0,3) === "squ"){
     string = string.replace("squ", "");
     return string + "squ" + suffix;
+  } else {
+    string = string.split("");
+    while (string[0].match(/[b-df-hj-np-tv-yz]/)){
+    string.push(string[0])
+    string.shift(string[0])
+  }
+  string = string.join("");
+  string = string + suffix;
+  return string
   }
 }
 
