@@ -21,20 +21,14 @@ var translator = function(string){
   }
 }
 
+$(document).ready(function(){
+  $("form#translator").submit(function(event){
+    var string = $("input#string").val();
+    var result = translator(string);
+    
+    $("#result").text(result);
+    $("#result").show();
 
-
-
-
-
-
-
-// $(document).ready(function(){
-//   $("form#translator").submit(function(event){
-//     var string = $("input#userInput").val();
-//     var results = translator(string);
-// console.log();
-//     $("#result").text(result);
-//
-//     event.preventDefault();
-//   });
-// });
+    event.preventDefault();
+  });
+});
