@@ -4,4 +4,8 @@ describe("translator", function(){
     expect(translator("apple")).to.equal("appleay");
   });
 
+  it("check to see if the word starts with a 'qu'. if true, move to end and add 'ay'", function(){
+    expect(translator("quilt")).to.equal("iltquay");
+  });
+
 });
