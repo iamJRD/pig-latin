@@ -1,29 +1,17 @@
-var vowels = ["a","e","i","o","u"];
-var removePunc = function(string){
-  var newString = string.replace(/[.,!@#$%^&*:'"]+/g, '').toLowerCase();
-    return newString;
-};
+var translator = function(string){
+  var suffix = "ay";
 
-var vowelAy = function(newString){
-  if (newString.charAt(0) === (vowels));
-    return newString += "ay";
-};
+  if (string[0].match(/[aeiou]/));
+    return string + suffix;
 
-var conso = function(newString){
-  if (newString.charAt(0) !== (vowels));
-    var consoLetter = newString.slice(0,1);
-    var consoWord = newString.substr(1);
-    return consoWord += consoLetter += "ay";
-};
-
-
-
+}
 
 $(document).ready(function(){
   $("form#translator").submit(function(event){
     var string = $("input#userInput").val();
     var results = translator(string);
-    console.log(results);
+console.log();
+    $("#result").text(result);
 
     event.preventDefault();
   });

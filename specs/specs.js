@@ -1,17 +1,7 @@
-describe("removePunc", function(){
-  it("remove puncuation from string and change to lowercase", function(){
-    expect(removePunc("Hello!")).to.equal("hello");
-  });
-});
+describe("translator", function(){
 
-describe("vowelAy", function(){
-  it("the word starts with a vowel, add 'ay' to the end", function(){
-    expect(vowelAy("apple")).to.equal("appleay");
+  it("check to see if the word starts with a vowel. if true, add 'ay' to the end", function(){
+    expect(translator("apple")).to.equal("appleay");
   });
-});
 
-describe("conso",function(){
-  it("word starts with a consonent, move the first consecutive consonent to the end and add 'ay'", function(){
-    expect(conso("pool")).to.equal("oolpay");
-  });
 });
