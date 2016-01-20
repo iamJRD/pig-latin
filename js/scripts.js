@@ -5,10 +5,12 @@ var translator = function(string){
     return string + suffix;
   } else if (string.substr(0,2) === "qu"){
     string = string.replace("qu", "");
-    return string + "quay";
+    return string + "qu" + suffix;
+  } else if (string.substr(0,3) === "squ"){
+    string = string.replace("squ", "");
+    return string + "squ" + suffix;
   }
 }
-
 
 
 

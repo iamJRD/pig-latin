@@ -8,4 +8,7 @@ describe("translator", function(){
     expect(translator("quilt")).to.equal("iltquay");
   });
 
+  it("check to see if the word starts with a 'squ'. if true, move to end and add 'ay'", function(){
+    expect(translator("squeal")).to.equal("ealsquay");
+  });
 });
