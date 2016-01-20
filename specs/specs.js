@@ -1,9 +1,17 @@
-describe("translator", function(){
-
+describe("removePunc", function(){
   it("remove puncuation from string and change to lowercase", function(){
-    expect(translator("Hello!")).to.equal("hello");
+    expect(removePunc("Hello!")).to.equal("hello");
   });
-  it("the word starts with a vowel, add 'ay' to the end", function() {
-    expect(newString("apple")).to.equal.("appleay");
+});
+
+describe("vowelAy", function(){
+  it("the word starts with a vowel, add 'ay' to the end", function(){
+    expect(vowelAy("apple")).to.equal("appleay");
+  });
+});
+
+describe("conso",function(){
+  it("word starts with a consonent, move the first consecutive consonent to the end and add 'ay'", function(){
+    expect(conso("pool")).to.equal("oolpay");
   });
 });
