@@ -17,7 +17,7 @@ var translator = function(word){
     }
     else {
       string = string.split("");
-      while (string[0].match(/[b-df-hj-np-tv-yz]/)){
+      while (string[0].match(/[b-df-hj-np-tv-z]/)){
       string.push(string[0])
       string.shift(string[0])
       }
